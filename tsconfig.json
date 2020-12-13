@@ -19,7 +19,11 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@ng-boilerplate/core": ["src/app/core"],
+      "@ng-boilerplate/shared": ["src/app/shared"]
+    }
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,

@@ -103,6 +103,12 @@
           "configurations": {
             "production": {
               "browserTarget": "ng-boilerplate:build:production"
+            },
+            "staging": {
+              "browserTarget": "ng-boilerplate:build:staging"
+            },
+            "development": {
+              "browserTarget": "ng-boilerplate:build:development"
             }
           }
         },
