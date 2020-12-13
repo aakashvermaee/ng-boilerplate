@@ -9,11 +9,12 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "serve:ssr": "node dist/ng-boilerplate/server/main.js",
-    "prod:ssr": "ng build --prod && ng run ng-boilerplate:server:production",
-    "stage:ssr": "ng build --configuration=staging && ng run ng-boilerplate:server:staging",
-    "dev:ssr": "ng build --configuration=development && ng run ng-boilerplate:server:development",
+    "prod:ssr": "npm run env-builder && ng build --prod && ng run ng-boilerplate:server:production",
+    "stage:ssr": "npm run env-builder && ng build --configuration=staging && ng run ng-boilerplate:server:staging",
+    "dev:ssr": "npm run env-builder && ng build --configuration=development && ng run ng-boilerplate:server:development",
     "prerender": "ng run ng-boilerplate:prerender",
-    "prettier": "prettier --write src"
+    "prettier": "prettier --write src",
+    "env-builder": "node env-builder.js"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "@angular/platform-server": "~11.0.4",
     "@angular/router": "~11.0.4",
     "@nguniversal/express-engine": "^11.0.1",
+    "dotenv": "^8.2.0",
     "express": "^4.15.2",
     "helmet": "^4.2.0",
     "rxjs": "~6.6.0",
