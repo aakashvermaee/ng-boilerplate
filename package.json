@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm run env-builder && ng run ng-boilerplate:serve:development",
+    "prestart": "npm run env-builder && npm run lint && npm run prettier",
+    "start": "ng run ng-boilerplate:serve:development",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

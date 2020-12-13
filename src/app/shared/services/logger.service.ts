@@ -1,3 +1,4 @@
+/* tslint:disable */
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 
@@ -14,29 +15,29 @@ export const LOG_TYPE = {
 export class LoggerService {
   constructor() {}
 
-  private canExecute() {
-    return environment.production;
+  private canExecute(): boolean {
+    return environment.production || true;
   }
 
-  info(message: any) {
+  info(message: any): void {
     if (!this.canExecute()) {
       console.info(`%c${LOG_TYPE.INFO.type}`, `color: ${LOG_TYPE.INFO.color}`, message);
     }
   }
 
-  debug(message: any) {
+  debug(message: any): void {
     if (!this.canExecute()) {
       console.debug(`%c${LOG_TYPE.DEBUG.type}`, `color: ${LOG_TYPE.DEBUG.color}`, message);
     }
   }
 
-  error(message: any) {
+  error(message: any): void {
     if (!this.canExecute()) {
       console.error(`%c${LOG_TYPE.ERROR.type}`, `color: ${LOG_TYPE.ERROR.color}`, message);
     }
   }
 
-  warning(message: any) {
+  warning(message: any): void {
     if (!this.canExecute()) {
       console.warn(`%c${LOG_TYPE.WARNING.type}`, `color: ${LOG_TYPE.WARNING.color}`, message);
     }

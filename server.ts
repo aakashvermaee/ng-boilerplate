@@ -52,7 +52,7 @@ export function app(): express.Express {
   return server;
 }
 
-function helmetConfig() {
+function helmetConfig(): any {
   return helmet();
 }
 
