@@ -6,3 +6,4 @@ export * from './constants/app-constants';
 export * from './types/IDeserializable';
 export * from './types/IModalData';
 export * from './services/modal.service';
+export * from './types/IEnvironment';

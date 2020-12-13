@@ -10,6 +10,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - server.ts
 - angular.json
 - tsconfig.json
+- all environment files
+- env-builder.js
+- logger-service.ts
 
 ## Development server
 
