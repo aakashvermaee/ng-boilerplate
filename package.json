@@ -12,7 +12,8 @@
     "prod:ssr": "ng build --prod && ng run ng-boilerplate:server:production",
     "stage:ssr": "ng build --configuration=staging && ng run ng-boilerplate:server:staging",
     "dev:ssr": "ng build --configuration=development && ng run ng-boilerplate:server:development",
-    "prerender": "ng run ng-boilerplate:prerender"
+    "prerender": "ng run ng-boilerplate:prerender",
+    "prettier": "prettier --write src"
   },
   "private": true,
   "dependencies": {
@@ -49,6 +50,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "nodemon": "^2.0.6",
+    "prettier": "^2.2.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
