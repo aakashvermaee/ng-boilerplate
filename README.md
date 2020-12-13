@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
 
+## Things todo after clone
+* Rename project dir from 'ng-boilerplate' to PROJECT_NAME.
+
+* Find & Replace string 'ng-boilerplate' in following files:
+1 package.json
+2 server.ts
+3 angular.json
+4 tsconfig.json
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
