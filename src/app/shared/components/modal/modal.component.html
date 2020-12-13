@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <div class="header">
+    <div class="icon">
+      <img src="assets/down-arrow.png" alt="down-arrow" />
+      <img mat-dialog-close class="close" src="assets/close.png" alt="modal-close" />
+    </div>
+    <h1 class="heading" *ngIf="data?.title" [innerHTML]="data.title | safeHtml: 'html'"></h1>
+  </div>
+  <hr class="seperator" />
+  <div *ngIf="data?.bodyHeading" class="text-container">
+    <span
+      class="heading"
+      *ngIf="data?.bodyHeading"
+      [innerHTML]="data.bodyHeading | safeHtml: 'html'"
+    ></span>
+    <span
+      class="sub-heading"
+      *ngIf="data?.bodySubHeading"
+      [innerHTML]="data.bodySubHeading | safeHtml: 'html'"
+    ></span>
+  </div>
+  <div *ngIf="data?.imageSrc" class="content">
+    <div *ngIf="data?.imageSrc" class="image">
+      <img [src]="data.imageSrc | safeHtml: 'url'" alt="modal-image" />
+    </div>
+    <p *ngIf="data?.message" [innerHTML]="data.message | safeHtml: 'html'" class="text"></p>
+  </div>
+</div>

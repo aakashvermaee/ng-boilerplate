@@ -22,7 +22,8 @@
     ],
     "paths": {
       "@ng-boilerplate/core": ["src/app/core"],
-      "@ng-boilerplate/shared": ["src/app/shared"]
+      "@ng-boilerplate/shared": ["src/app/shared"],
+      "@ng-boilerplate/material": ["src/app/material"]
     }
   },
   "angularCompilerOptions": {
