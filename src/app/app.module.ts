@@ -5,8 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from '@ng-boilerplate/core';
-import { SharedModule } from '@ng-boilerplate/shared';
+import { SharedModule, ENVIRONMENT_CONFIG } from '@ng-boilerplate/shared';
 import { MaterialModule } from '@ng-boilerplate/material';
+import { environment } from "../environments/environment";
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +19,12 @@ import { MaterialModule } from '@ng-boilerplate/material';
     MaterialModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: ENVIRONMENT_CONFIG,
+      useValue: environment,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
