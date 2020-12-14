@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from '@ng-boilerplate/core';
 import { SharedModule, ENVIRONMENT_CONFIG } from '@ng-boilerplate/shared';
 import { MaterialModule } from '@ng-boilerplate/material';
-import { environment } from "../environments/environment";
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],

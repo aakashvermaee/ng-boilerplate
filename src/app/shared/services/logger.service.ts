@@ -1,6 +1,6 @@
 /* tslint:disable */
-import { Injectable } from '@angular/core';
-import { environment } from '@ng-boilerplate/environments';
+import { Injectable, Inject } from '@angular/core';
+import { IEnvironmentConfig, ENVIRONMENT_CONFIG } from '../types/IEnvironment';
 
 export const LOG_TYPE = {
   DEBUG: { type: 'DEBUG', color: 'green' },
@@ -13,10 +13,10 @@ export const LOG_TYPE = {
   providedIn: 'root',
 })
 export class LoggerService {
-  constructor() {}
+  constructor(@Inject(ENVIRONMENT_CONFIG) private environment: IEnvironmentConfig) {}
 
   private canExecute(): boolean {
-    return environment.production;
+    return this.environment.production;
   }
 
   info(message: any): void {
