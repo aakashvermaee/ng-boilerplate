@@ -6,6 +6,7 @@ export const APP_CONSTANTS = {
     // headers
     accessToken: 'x-access-token',
     refreshToken: 'x-refresh-token',
+    name: 'name',
   },
   PRELOAD_ASSETS: [],
 };

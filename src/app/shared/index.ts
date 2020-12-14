@@ -4,3 +4,4 @@ export * from './constants';
 export * from './pipes';
 export * from './services';
 export * from './types';
+export * from './models';
