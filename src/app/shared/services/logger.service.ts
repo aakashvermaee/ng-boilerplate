@@ -19,7 +19,7 @@ export class LoggerService {
     return this.environment.production;
   }
 
-  info(message: any): void {
+  info(...message: any): void {
     if (!this.canExecute()) {
       console.log(
         `%c[${LOG_TYPE.INFO.type} ${new Date().toISOString()}]`,
@@ -29,7 +29,7 @@ export class LoggerService {
     }
   }
 
-  debug(message: any): void {
+  debug(...message: any): void {
     if (!this.canExecute()) {
       console.log(
         `%c[${LOG_TYPE.DEBUG.type} ${new Date().toISOString()}]`,
@@ -39,7 +39,7 @@ export class LoggerService {
     }
   }
 
-  error(message: any): void {
+  error(...message: any): void {
     if (!this.canExecute()) {
       console.log(
         `%c[${LOG_TYPE.ERROR.type} ${new Date().toISOString()}]`,
@@ -49,7 +49,7 @@ export class LoggerService {
     }
   }
 
-  warning(message: any): void {
+  warning(...message: any): void {
     if (!this.canExecute()) {
       console.log(
         `%c[${LOG_TYPE.WARNING.type} ${new Date().toISOString()}]`,
