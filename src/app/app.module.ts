@@ -8,6 +8,7 @@ import { CoreModule } from '@ng-boilerplate/core';
 import { SharedModule, ENVIRONMENT_CONFIG } from '@ng-boilerplate/shared';
 import { MaterialModule } from '@ng-boilerplate/material';
 import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { environment } from '../environments/environment';
     SharedModule,
     MaterialModule,
     BrowserAnimationsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     {

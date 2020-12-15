@@ -53,7 +53,31 @@ export function app(): express.Express {
 }
 
 function helmetConfig(): any {
-  return helmet();
+  return helmet({
+    contentSecurityPolicy: {
+      directives: {
+        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+        'default-src': [
+          "'self'",
+          "https:",
+          "data:",
+          'fonts.googleapis.com',
+          'fonts.gstatic.com',
+          'use.typekit.net',
+          'p.typekit.net',
+        ],
+        'font-src': [
+          "'self'",
+          "https:",
+          "data:",
+          'fonts.googleapis.com',
+          'fonts.gstatic.com',
+          'use.typekit.net',
+          'p.typekit.net',
+        ],
+      },
+    },
+  });
 }
 
 function run(): void {
