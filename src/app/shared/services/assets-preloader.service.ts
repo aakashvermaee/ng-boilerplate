@@ -9,8 +9,10 @@ import { Injectable } from '@angular/core';
 export class AssetsPreloaderService {
   constructor() {}
 
-  preload(assets: string[] = []) {
-    if (!assets.length) return;
+  preload(assets: string[] = []): void {
+    if (!assets.length) {
+      return;
+    }
 
     assets.forEach((path) => {
       const image = new Image();

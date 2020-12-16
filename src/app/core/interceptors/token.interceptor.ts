@@ -19,7 +19,7 @@ export class TokenInterceptor implements HttpInterceptor {
   constructor(
     @Inject(PLATFORM_ID) private platformId: string,
     @Inject(ENVIRONMENT_CONFIG) private environment: IEnvironmentConfig,
-    private _authService: AuthorizationService,
+    private authService: AuthorizationService,
     private localStorageService: LocalStorageService,
     private logger: LoggerService
   ) {}
@@ -27,7 +27,7 @@ export class TokenInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (
       isPlatformBrowser(this.platformId) &&
-      // this._authService.isLoggedIn() &&
+      this.authService.isLoggedIn() &&
       !req.url.includes('refresh-token')
     ) {
       this.logger.debug('authenticated user so adding token');

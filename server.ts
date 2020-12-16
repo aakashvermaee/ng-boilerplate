@@ -59,8 +59,8 @@ function helmetConfig(): any {
         ...helmet.contentSecurityPolicy.getDefaultDirectives(),
         'default-src': [
           "'self'",
-          "https:",
-          "data:",
+          'https:',
+          'data:',
           'fonts.googleapis.com',
           'fonts.gstatic.com',
           'use.typekit.net',
@@ -68,8 +68,8 @@ function helmetConfig(): any {
         ],
         'font-src': [
           "'self'",
-          "https:",
-          "data:",
+          'https:',
+          'data:',
           'fonts.googleapis.com',
           'fonts.gstatic.com',
           'use.typekit.net',

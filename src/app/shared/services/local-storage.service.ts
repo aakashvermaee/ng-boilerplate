@@ -26,7 +26,7 @@ export class LocalStorageService {
     }
   }
 
-  setUser(user: User) {
+  setUser(user: User): void {
     this.setItem(APP_CONSTANTS.auth.name, user.name);
     this.setItem(APP_CONSTANTS.auth.accessToken, user.accountToken);
     this.setItem(APP_CONSTANTS.auth.refreshToken, user.refreshToken);
@@ -39,6 +39,9 @@ export class LocalStorageService {
   }
 
   checkLogin(): boolean {
-    return localStorage.getItem(APP_CONSTANTS.auth.name) ? true : false;
+    if (this.canExecute()) {
+      return localStorage.getItem(APP_CONSTANTS.auth.name) ? true : false;
+    }
+    return false;
   }
 }

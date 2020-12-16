@@ -93,7 +93,7 @@ export class RefreshTokenInterceptor implements HttpInterceptor {
     );
   }
 
-  addAuthenticationToken(request: HttpRequest<any>) {
+  addAuthenticationToken(request: HttpRequest<any>): HttpRequest<any> {
     // Get access token from Local Storage
     const isAccessTokens =
       this.localStorageService.getItem(APP_CONSTANTS.auth.accessToken) &&
@@ -119,11 +119,11 @@ export class RefreshTokenInterceptor implements HttpInterceptor {
     });
   }
 
-  logoutUser() {
+  logoutUser(): void {
     this.authService.logoutUser();
   }
 
-  updateAccessToken(tokenConfig: any) {
+  updateAccessToken(tokenConfig: any): void {
     this.localStorageService.setItem(
       APP_CONSTANTS.auth.accessToken,
       tokenConfig[APP_CONSTANTS.auth.accessToken]

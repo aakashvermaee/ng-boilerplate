@@ -13,7 +13,7 @@ export class SeoService {
   /**
    * This method is used to update singular SEO tag.
    */
-  updateTag(tag: MetaDefinition) {
+  updateTag(tag: MetaDefinition): void {
     this.meta.updateTag(tag);
   }
 
@@ -21,7 +21,9 @@ export class SeoService {
    * This method is used to bulk update SEO tags.
    */
   updateTags(tags: MetaDefinition[] = []): void {
-    if (!tags.length) return;
+    if (!tags.length) {
+      return;
+    }
 
     tags.forEach((tag: MetaDefinition) => {
       this.meta.updateTag(tag);

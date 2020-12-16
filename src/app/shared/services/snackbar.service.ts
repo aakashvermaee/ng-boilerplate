@@ -12,7 +12,7 @@ import * as _ from 'lodash';
   providedIn: 'root',
 })
 export class SnackbarService {
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(private snackBar: MatSnackBar) {}
 
   openFromText(
     message: string,
@@ -28,7 +28,7 @@ export class SnackbarService {
       },
       config
     );
-    return this._snackBar.open(message, action, config);
+    return this.snackBar.open(message, action, config);
   }
 
   openFromComponent<C extends SimpleSnackBar>(
@@ -36,6 +36,6 @@ export class SnackbarService {
     config?: MatSnackBarConfig
   ): MatSnackBarRef<C> {
     config = _.assign({}, { duration: 2000 }, config);
-    return this._snackBar.openFromComponent(component, config);
+    return this.snackBar.openFromComponent(component, config);
   }
 }
