@@ -7,7 +7,7 @@ const path = require('path');
  * Keys in export should match with IEnvironment.
  */
 const data = `
-import { IEnvironmentConfig } from '@ng-boilerplate/shared';
+import { IEnvironmentConfig } from 'projects/common-utils/src';
 
 export const ROOT_ENVIRONMENT: IEnvironmentConfig = {
   production: ${process.env.production},

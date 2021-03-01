@@ -1,5 +1,5 @@
 import { ROOT_ENVIRONMENT } from '../../env';
-import { IEnvironmentConfig } from '@ng-boilerplate/shared';
+import { IEnvironmentConfig } from 'projects/common-utils/src';
 
 export const environment: IEnvironmentConfig = {
   ...ROOT_ENVIRONMENT,

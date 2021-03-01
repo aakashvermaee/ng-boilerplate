@@ -7,7 +7,7 @@ import {
   APP_CONSTANTS,
   AuthorizationService,
   LoggerService,
-} from '@ng-boilerplate/shared';
+} from '../../shared';
 
 /**
  * Interceptor to make refresh-token requests and, update same in localStorage

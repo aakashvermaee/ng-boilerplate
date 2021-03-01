@@ -4,9 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from '@ng-boilerplate/core';
-import { SharedModule, ENVIRONMENT_CONFIG } from '@ng-boilerplate/shared';
-import { MaterialModule } from '@ng-boilerplate/material';
+import {
+  CoreModule,
+  SharedModule,
+  ENVIRONMENT_CONFIG,
+  MaterialModule,
+} from 'projects/common-utils/src';
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
 

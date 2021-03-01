@@ -14,7 +14,7 @@
     "stage:ssr": "npm run env-builder && ng build --configuration=staging && ng run ng-boilerplate:server:staging",
     "dev:ssr": "npm run env-builder && ng build --configuration=development && ng run ng-boilerplate:server:development",
     "prerender": "ng run ng-boilerplate:prerender",
-    "prettier": "prettier --write src",
+    "prettier": "prettier --write src projects",
     "env-builder": "node env-builder.js"
   },
   "private": true,
@@ -59,6 +59,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^11.0.0",
     "nodemon": "^2.0.6",
     "prettier": "^2.2.1",
     "protractor": "~7.0.0",

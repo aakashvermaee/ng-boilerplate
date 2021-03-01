@@ -87,8 +87,6 @@
                   "with": "src/environments/environment.dev.ts"
                 }
               ],
-              "optimization": false,
-              "outputHashing": "all",
               "sourceMap": true,
               "namedChunks": false,
               "extractLicenses": false,
@@ -233,6 +231,46 @@
           },
           "configurations": {
             "production": {}
+          }
+        }
+      }
+    },
+    "common-utils": {
+      "projectType": "library",
+      "root": "projects/common-utils",
+      "sourceRoot": "projects/common-utils/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/common-utils/tsconfig.lib.json",
+            "project": "projects/common-utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/common-utils/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/common-utils/src/test.ts",
+            "tsConfig": "projects/common-utils/tsconfig.spec.json",
+            "karmaConfig": "projects/common-utils/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/common-utils/tsconfig.lib.json",
+              "projects/common-utils/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

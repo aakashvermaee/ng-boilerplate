@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NotFoundComponent } from '@ng-boilerplate/shared';
+import { NotFoundComponent } from 'projects/common-utils/src';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [

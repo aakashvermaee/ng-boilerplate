@@ -9,7 +9,7 @@ import {
   IEnvironmentConfig,
   AuthorizationService,
   LoggerService,
-} from '@ng-boilerplate/shared';
+} from '../../shared';
 
 /**
  * Interceptor to add authentication headers on every request
